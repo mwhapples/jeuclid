@@ -453,7 +453,7 @@
 		<maven-bundle-plugin.version>2.3.5</maven-bundle-plugin.version>
 		<maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
 		<commons-logging.version>1.3.5</commons-logging.version>
-		<ant.version>1.10.1</ant.version>
+		<ant.version>1.10.15</ant.version>
 		<batik.version>1.19</batik.version>
 		<freehep-graphicsio.version>2.4</freehep-graphicsio.version>
 		<freehep-graphicsio-gif.version>2.4</freehep-graphicsio-gif.version>
@@ -468,7 +468,7 @@
 		<ams-fonts.version>1.0-2</ams-fonts.version>
 		<commons-cli.version>1.2</commons-cli.version>
 		<commons-lang3.version>3.0.1</commons-lang3.version>
-		<fop.version>2.3</fop.version>
+		<fop.version>2.11</fop.version>
 		<webstart-maven-plugin.version>1.0-beta-1</webstart-maven-plugin.version>
 		<osxappbundle-maven-plugin.version>1.0-alpha-1</osxappbundle-maven-plugin.version>
 		<maven-shade-plugin.version>1.4</maven-shade-plugin.version>
