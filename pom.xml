@@ -449,7 +449,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<runtime.lib>${java.home}/lib/rt.jar</runtime.lib>
 		<common.dir>${basedir}/..</common.dir>
-		<gmaven-plugin.version>1.0</gmaven-plugin.version>
+		<gmaven-plugin.version>1.5</gmaven-plugin.version>
 		<maven-bundle-plugin.version>2.3.5</maven-bundle-plugin.version>
 		<maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
 		<commons-logging.version>1.3.5</commons-logging.version>
