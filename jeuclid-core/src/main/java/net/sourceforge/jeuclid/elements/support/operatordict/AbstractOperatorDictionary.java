@@ -45,7 +45,7 @@ public abstract class AbstractOperatorDictionary implements OperatorDictionary,
      * Default constructor.
      */
     protected AbstractOperatorDictionary() {
-        this.dict = new EnumMap<OperatorAttribute, Map<String, Map<OperatorForm, String>>>(
+        this.dict = new EnumMap<>(
                 OperatorAttribute.class);
         this.initializeFromXML(this.dict);
         this.overrideStretchy();
