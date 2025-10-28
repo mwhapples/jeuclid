@@ -476,6 +476,6 @@
 		<AppleJavaExtensions.version>1.4</AppleJavaExtensions.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<jetty-maven-plugin.version>7.0.1.v20091125</jetty-maven-plugin.version>
-		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
 	</properties>
 </project>
