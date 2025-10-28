@@ -20,9 +20,9 @@
  * Contains the layout classes. 
  * The classes in this package provide a generic  method for layouting of 
  * displayable objects. A node to be layouted must implement the 
- * {@link LayoutableNode} 
+ * {@link net.sourceforge.jeuclid.layout.LayoutableNode}
  * interface. The layout functions will then generate instances of
- * {@link GraphicsObject}. These can be drawn when the layout is completed.
+ * {@link net.sourceforge.jeuclid.layout.GraphicsObject}. These can be drawn when the layout is completed.
  */
 package net.sourceforge.jeuclid.layout;
 

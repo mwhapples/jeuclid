@@ -133,7 +133,7 @@ public abstract class AbstractOperatorDictionary implements OperatorDictionary,
      *            Operator character.
      * @param form
      *            Form value
-     * @param attributeName
+     * @param attribute
      *            Name of the attribute.
      * @return Default value (VALUE_UNKNOWN, if default value has not been
      *         provided yet).

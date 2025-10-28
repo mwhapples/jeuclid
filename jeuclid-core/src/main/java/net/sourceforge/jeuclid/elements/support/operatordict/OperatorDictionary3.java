@@ -283,8 +283,9 @@ public final class OperatorDictionary3 extends AbstractOperatorDictionary
     /**
      * @param operator
      * @param form
-     * @param lspace
-     * @param intToSpace
+     * @param attribute
+     * @param value
+     * @param dict
      */
     private void addAttr(
             final String operator,
@@ -310,7 +311,7 @@ public final class OperatorDictionary3 extends AbstractOperatorDictionary
     }
 
     /**
-     * @param lspace
+     * @param spaceInt
      * @return
      */
     private String intToSpace(final String spaceInt) {

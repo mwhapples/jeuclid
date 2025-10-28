@@ -95,7 +95,7 @@ public abstract class AbstractUnderOver extends AbstractJEuclidElement
     }
 
     /**
-     * @param context
+     * @param now
      *            LayoutContext
      * @return true if limits are moved (behave like under/over).
      */
