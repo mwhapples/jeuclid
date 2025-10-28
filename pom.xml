@@ -466,8 +466,8 @@
 		<dejavu-fonts.version>2.29</dejavu-fonts.version>
 		<stix-fonts.version>1.0-beta-3</stix-fonts.version>
 		<ams-fonts.version>1.0-2</ams-fonts.version>
-		<commons-cli.version>1.2</commons-cli.version>
-		<commons-lang3.version>3.0.1</commons-lang3.version>
+		<commons-cli.version>1.10.0</commons-cli.version>
+		<commons-lang3.version>3.19.0</commons-lang3.version>
 		<fop.version>2.11</fop.version>
 		<webstart-maven-plugin.version>1.0-beta-1</webstart-maven-plugin.version>
 		<osxappbundle-maven-plugin.version>1.0-alpha-1</osxappbundle-maven-plugin.version>
