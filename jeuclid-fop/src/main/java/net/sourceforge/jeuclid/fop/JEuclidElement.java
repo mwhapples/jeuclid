@@ -93,7 +93,7 @@ public class JEuclidElement extends JEuclidObj {
             final String attrName = "jeuclid:" + localName;
             final String isSet = e.getAttributeNS(Constants.NS_JEUCLID_EXT,
                     localName);
-            if ((isSet == null) || (isSet.length() == 0)) {
+            if ((isSet == null) || (isSet.isEmpty())) {
                 e.setAttributeNS(Constants.NS_JEUCLID_EXT, attrName, p
                         .toString(this.layoutContext.getParameter(p)));
             }
@@ -153,7 +153,7 @@ public class JEuclidElement extends JEuclidObj {
         this.layoutContext.setParameter(Parameter.MATHSIZE, msize);
         final List<String> defaultFonts = (List<String>) this.layoutContext
                 .getParameter(Parameter.FONTS_SERIF);
-        final List<String> newFonts = new ArrayList<String>(fontkeys.length
+        final List<String> newFonts = new ArrayList<>(fontkeys.length
                 + defaultFonts.size());
         for (final FontTriplet t : fontkeys) {
             newFonts.add(t.getName());

@@ -65,7 +65,7 @@ public final class TLIListTypeWrapper extends AbstractSimpleTypeWrapper {
             final String whitespace = "\\s*";
             final String[] strList = value.split(whitespace
                     + TLIListTypeWrapper.SEPARATOR + whitespace);
-            final List<String> retVal = new ArrayList<String>(strList.length);
+            final List<String> retVal = new ArrayList<>(strList.length);
             for (final String str : strList) {
                 retVal.add(str.trim().toLowerCase(Locale.ENGLISH).intern());
             }

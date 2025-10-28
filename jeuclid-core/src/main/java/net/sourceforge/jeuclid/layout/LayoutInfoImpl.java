@@ -65,7 +65,7 @@ public class LayoutInfoImpl implements LayoutInfo {
      */
     public LayoutInfoImpl() {
         this.layoutStage = LayoutStage.NONE;
-        this.graphicObjects = new ArrayList<GraphicsObject>();
+        this.graphicObjects = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

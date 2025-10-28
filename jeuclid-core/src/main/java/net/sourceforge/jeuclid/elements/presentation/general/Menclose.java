@@ -338,7 +338,7 @@ public final class Menclose extends AbstractElementWithDelegates implements
      */
     private static final Log LOGGER = LogFactory.getLog(Menclose.class);
 
-    private static final Map<String, Constructor<?>> IMPL_CLASSES = new HashMap<String, Constructor<?>>();;
+    private static final Map<String, Constructor<?>> IMPL_CLASSES = new HashMap<>();;
 
     private static final long serialVersionUID = 1L;
 
@@ -434,12 +434,12 @@ public final class Menclose extends AbstractElementWithDelegates implements
 
     private Stack<Constructor<?>> parseNotations() {
         final String[] notations = this.getNotation().split(" ");
-        final Stack<Constructor<?>> notationImpls = new Stack<Constructor<?>>();
+        final Stack<Constructor<?>> notationImpls = new Stack<>();
         for (final String curNotation : notations) {
             final Constructor<?> con = Menclose.IMPL_CLASSES.get(curNotation
                     .toLowerCase(Locale.ENGLISH));
             if (con == null) {
-                if (curNotation.length() > 0) {
+                if (!curNotation.isEmpty()) {
                     Menclose.LOGGER.info("Unsupported notation for menclose: "
                             + curNotation);
                 }

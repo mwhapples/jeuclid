@@ -52,7 +52,7 @@ public final class JEuclidElementFactory {
     private static final Log LOGGER = LogFactory
             .getLog(JEuclidElementFactory.class);
 
-    private static final Map<String, Constructor<? extends JEuclidElement>> IMPL_CLASSES = new HashMap<String, Constructor<? extends JEuclidElement>>();;
+    private static final Map<String, Constructor<? extends JEuclidElement>> IMPL_CLASSES = new HashMap<>();;
 
     private JEuclidElementFactory() {
         // Empty on purpose
@@ -80,7 +80,7 @@ public final class JEuclidElementFactory {
             final String nsUri, final String qualifiedName) {
         final String localName = JEuclidElementFactory
                 .removeNSPrefix(qualifiedName);
-        if ((nsUri == null) || (nsUri.length() == 0)
+        if ((nsUri == null) || (nsUri.isEmpty())
                 || (AbstractJEuclidElement.URI.equals(nsUri))) {
             return JEuclidElementFactory.IMPL_CLASSES.get(localName);
         } else {

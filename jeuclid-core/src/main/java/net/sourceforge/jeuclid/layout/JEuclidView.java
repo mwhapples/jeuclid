@@ -94,7 +94,7 @@ public class JEuclidView implements AbstractView, LayoutView, EventListener {
             this.graphics = layoutGraphics;
         }
         this.context = layoutContext;
-        this.layoutMap = new HashMap<Node, LayoutInfo>();
+        this.layoutMap = new HashMap<>();
     }
 
     /**
@@ -126,7 +126,7 @@ public class JEuclidView implements AbstractView, LayoutView, EventListener {
         } else {
             imported = jDocOld.importNode(jDocNew.getDocumentElement(), true);
 
-            path = new ArrayList<Integer>();
+            path = new ArrayList<>();
             parent = oldNode;
 
             while (parent.getParentNode() != null) {
@@ -368,7 +368,7 @@ public class JEuclidView implements AbstractView, LayoutView, EventListener {
     public List<JEuclidView.NodeRect> getNodesAt(final float x,
             final float y, final float offsetX, final float offsetY) {
         this.layout();
-        final List<JEuclidView.NodeRect> nodes = new LinkedList<JEuclidView.NodeRect>();
+        final List<JEuclidView.NodeRect> nodes = new LinkedList<>();
         this.getNodesAtRec(x, y, offsetX, offsetY, this.document, nodes);
         return nodes;
     }

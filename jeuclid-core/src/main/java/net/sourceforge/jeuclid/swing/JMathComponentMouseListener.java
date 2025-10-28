@@ -58,7 +58,7 @@ public class JMathComponentMouseListener implements MouseListener {
     public final void mouseClicked(final MouseEvent e) {
         final MathComponentUI ui = this.mathComponent.getUI();
         final List<NodeRect> rectList = ui.getNodesAt(this.mathComponent, e.getX(), e.getY());
-        if (rectList != null && rectList.size() > 0) {
+        if (rectList != null && !rectList.isEmpty()) {
             final Node lastNode = rectList.get(rectList.size() - 1).getNode();
             final CursorListener cursorListener = this.mathComponent.getCursorListener();
             if (cursorListener != null) {

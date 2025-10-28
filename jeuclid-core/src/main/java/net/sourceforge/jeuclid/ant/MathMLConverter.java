@@ -472,7 +472,7 @@ public class MathMLConverter extends MatchingTask {
      */
     private boolean isNullOrEmpty(final String s) {
         // TODO: use .isEmpty() when JEuclid moves to 1.6
-        return s == null || s.length() == 0;
+        return s == null || s.isEmpty();
     }
 
     /**

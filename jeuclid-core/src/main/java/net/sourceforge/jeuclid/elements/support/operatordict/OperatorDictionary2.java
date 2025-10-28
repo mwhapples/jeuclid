@@ -168,7 +168,7 @@ public final class OperatorDictionary2 extends AbstractOperatorDictionary
 
             if (rawName
                     .equals(OperatorDictionary2.DictionaryReader.ELEMENT_ELEMENT)) {
-                this.currentEntry = new TreeMap<OperatorAttribute, String>();
+                this.currentEntry = new TreeMap<>();
                 final String form = attlist.getValue(Mo.ATTR_FORM);
                 if (form == null) {
                     // it is impossible because "form" is required attribute
@@ -209,13 +209,13 @@ public final class OperatorDictionary2 extends AbstractOperatorDictionary
                     Map<String, Map<OperatorForm, String>> mapForAttr = this.dict
                             .get(attribute);
                     if (mapForAttr == null) {
-                        mapForAttr = new TreeMap<String, Map<OperatorForm, String>>();
+                        mapForAttr = new TreeMap<>();
                         this.dict.put(attribute, mapForAttr);
                     }
                     Map<OperatorForm, String> valueForForm = mapForAttr
                             .get(this.currentOperator);
                     if (valueForForm == null) {
-                        valueForForm = new EnumMap<OperatorForm, String>(
+                        valueForForm = new EnumMap<>(
                                 OperatorForm.class);
                         mapForAttr.put(this.currentOperator, valueForForm);
                     }

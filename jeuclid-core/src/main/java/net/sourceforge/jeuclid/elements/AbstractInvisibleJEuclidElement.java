@@ -49,13 +49,13 @@ public abstract class AbstractInvisibleJEuclidElement extends
     /** {@inheritDoc} */
     @Override
     public List<LayoutableNode> getChildrenToLayout() {
-        return new ArrayList<LayoutableNode>(0);
+        return new ArrayList<>(0);
     }
 
     /** {@inheritDoc} */
     @Override
     public List<LayoutableNode> getChildrenToDraw() {
-        return new ArrayList<LayoutableNode>(0);
+        return new ArrayList<>(0);
     }
 
 }

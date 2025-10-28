@@ -127,14 +127,14 @@ public abstract class AbstractJEuclidElement extends
     // private static final Log LOGGER = LogFactory
     // .getLog(AbstractJEuclidElement.class);
 
-    private static final Set<String> DEPRECATED_ATTRIBUTES = new HashSet<String>();
+    private static final Set<String> DEPRECATED_ATTRIBUTES = new HashSet<>();
 
     /**
      * Reference to the element acting as parent if there is no parent.
      */
     private JEuclidElement fakeParent;
 
-    private final Map<String, String> defaultMathAttributes = new HashMap<String, String>();
+    private final Map<String, String> defaultMathAttributes = new HashMap<>();
 
     /**
      * Default constructor. Sets MathML Namespace.
@@ -175,7 +175,7 @@ public abstract class AbstractJEuclidElement extends
     public Font getFont(final LayoutContext context) {
         final String content = this.getText();
         final char aChar;
-        if (content.length() > 0) {
+        if (!content.isEmpty()) {
             aChar = content.charAt(0);
         } else {
             aChar = 'A';

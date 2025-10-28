@@ -49,7 +49,7 @@ public final class ImageIODetector implements ConverterDetector {
 
         final String[] mimeTypes = ImageIO.getWriterMIMETypes();
 
-        final Set<String> noAlphaMimeTypes = new TreeSet<String>();
+        final Set<String> noAlphaMimeTypes = new TreeSet<>();
         noAlphaMimeTypes.add("image/jpeg");
         noAlphaMimeTypes.add("image/bmp");
 

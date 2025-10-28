@@ -34,7 +34,7 @@ import java.util.Set;
 public class MultiAttributedCharacterIterator implements
         AttributedCharacterIterator {
 
-    private final List<AttributedCharacterIterator> realIterators = new ArrayList<AttributedCharacterIterator>();
+    private final List<AttributedCharacterIterator> realIterators = new ArrayList<>();
 
     private int currentList;
 
@@ -82,7 +82,7 @@ public class MultiAttributedCharacterIterator implements
 
     /** {@inheritDoc} */
     public Set<Attribute> getAllAttributeKeys() {
-        final Set<Attribute> retVal = new HashSet<Attribute>();
+        final Set<Attribute> retVal = new HashSet<>();
         for (final AttributedCharacterIterator ri : this.realIterators) {
             retVal.addAll(ri.getAllAttributeKeys());
         }

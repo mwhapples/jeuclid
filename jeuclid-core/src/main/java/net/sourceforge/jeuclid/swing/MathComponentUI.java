@@ -52,7 +52,7 @@ public class MathComponentUI extends ComponentUI implements
     // private static final Log LOGGER =
     // LogFactory.getLog(MathComponentUI.class);
 
-    private final Map<JMathComponent, Reference<ViewContext>> contextCache = new HashMap<JMathComponent, Reference<ViewContext>>();
+    private final Map<JMathComponent, Reference<ViewContext>> contextCache = new HashMap<>();
 
     /**
      * Default constructor.
@@ -72,7 +72,7 @@ public class MathComponentUI extends ComponentUI implements
 
         if (cache == null) {
             cache = new ViewContext(jc);
-            contextCache.put(jc, new SoftReference<ViewContext>(cache));
+            contextCache.put(jc, new SoftReference<>(cache));
         }
 
         return cache.getJeculidView((Graphics2D) g);
@@ -273,7 +273,7 @@ public class MathComponentUI extends ComponentUI implements
     private static class ViewContext {
         final Node document;
         final LayoutContext layoutContext;
-        final Map<Graphics2D, JEuclidView> jeuclidViews = new HashMap<Graphics2D, JEuclidView>();
+        final Map<Graphics2D, JEuclidView> jeuclidViews = new HashMap<>();
 
         public ViewContext(JMathComponent jMathComponent) {
             this.document = jMathComponent.getDocument();

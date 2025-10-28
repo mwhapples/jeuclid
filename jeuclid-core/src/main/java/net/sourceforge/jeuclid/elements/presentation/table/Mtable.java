@@ -239,7 +239,7 @@ public final class Mtable extends AbstractTableElement implements
          * @return an alignment for this string type
          */
         public static VAlign parseString(final String s) {
-            if ((s == null) || (s.length() == 0)) {
+            if ((s == null) || (s.isEmpty())) {
                 return null;
             }
             final int align;
@@ -268,7 +268,7 @@ public final class Mtable extends AbstractTableElement implements
                 align = Mtable.VAlign.BASELINE;
                 s3 = "0";
             }
-            if (s3.length() > 0) {
+            if (!s3.isEmpty()) {
                 try {
                     relativeTo = Integer.parseInt(s3);
                 } catch (final NumberFormatException nfe) {
@@ -424,7 +424,7 @@ public final class Mtable extends AbstractTableElement implements
         int cur = -1;
         String last = "";
         for (final String s : array) {
-            if (s.length() > 0) {
+            if (!s.isEmpty()) {
                 cur++;
                 if (cur == index) {
                     return s;
@@ -859,7 +859,7 @@ public final class Mtable extends AbstractTableElement implements
             if (rowChild[i] instanceof MathMLTableRowElement) {
                 mtdChildren[i] = rowChild[i].getChildrenToLayout();
             } else {
-                mtdChildren[i] = new ArrayList<LayoutableNode>(1);
+                mtdChildren[i] = new ArrayList<>(1);
                 mtdChildren[i].add(rowChild[i]);
             }
         }
@@ -869,7 +869,7 @@ public final class Mtable extends AbstractTableElement implements
     private List<Float> calculateBasicColumnWidth(final LayoutView view,
             final LayoutStage stage, final int rows,
             final List<LayoutableNode>[] mtdChildren) {
-        final List<Float> columnwidth = new ArrayList<Float>();
+        final List<Float> columnwidth = new ArrayList<>();
         for (int i = 0; i < rows; i++) {
             int missing = mtdChildren[i].size() - columnwidth.size();
             while (missing > 0) {
@@ -956,7 +956,7 @@ public final class Mtable extends AbstractTableElement implements
         } else if (n instanceof MathMLTableRowElement) {
             final MathMLTableRowElement rowE = (MathMLTableRowElement) n;
             final String alignArray = rowE.getColumnalign();
-            if ((alignArray != null) && (alignArray.length() > 0)) {
+            if ((alignArray != null) && (!alignArray.isEmpty())) {
                 retVal = HAlign.parseString(this.getSpaceArrayEntry(alignArray,
                         col), HAlign.CENTER);
             } else {
@@ -965,7 +965,7 @@ public final class Mtable extends AbstractTableElement implements
         } else if (n instanceof MathMLTableElement) {
             final MathMLTableElement table = (MathMLTableElement) n;
             final String alignArray = table.getColumnalign();
-            if ((alignArray != null) && (alignArray.length() > 0)) {
+            if ((alignArray != null) && (!alignArray.isEmpty())) {
                 retVal = HAlign.parseString(this.getSpaceArrayEntry(alignArray,
                         col), HAlign.CENTER);
             } else {
@@ -1001,7 +1001,7 @@ public final class Mtable extends AbstractTableElement implements
         } else if (n instanceof MathMLTableElement) {
             final MathMLTableElement table = (MathMLTableElement) n;
             final String alignArray = table.getRowalign();
-            if ((alignArray != null) && (alignArray.length() > 0)) {
+            if ((alignArray != null) && (!alignArray.isEmpty())) {
                 retVal = Mtable.VAlign.parseString(this.getSpaceArrayEntry(
                         alignArray, row));
             } else {

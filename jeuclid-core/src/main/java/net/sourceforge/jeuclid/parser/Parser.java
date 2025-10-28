@@ -127,7 +127,7 @@ public final class Parser {
      * Default constructor.
      */
     protected Parser() {
-        this.builders = new ConcurrentHashMap<Long, Reference<DocumentBuilder>>();
+        this.builders = new ConcurrentHashMap<>();
     }
 
     private DocumentBuilder createDocumentBuilder() {
@@ -341,7 +341,7 @@ public final class Parser {
             }
         }
         final DocumentBuilder builder = this.createDocumentBuilder();
-        this.builders.put(id, new SoftReference<DocumentBuilder>(builder));
+        this.builders.put(id, new SoftReference<>(builder));
         return builder;
     }
 

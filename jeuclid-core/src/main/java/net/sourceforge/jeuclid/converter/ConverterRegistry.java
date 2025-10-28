@@ -41,11 +41,11 @@ public final class ConverterRegistry {
         }
     }
 
-    private final Map<String, ConverterPlugin> mimetype2converter = new HashMap<String, ConverterPlugin>();
+    private final Map<String, ConverterPlugin> mimetype2converter = new HashMap<>();
 
-    private final Map<String, String> mimetype2suffix = new HashMap<String, String>();
+    private final Map<String, String> mimetype2suffix = new HashMap<>();
 
-    private final Map<String, String> suffix2mimetype = new HashMap<String, String>();
+    private final Map<String, String> suffix2mimetype = new HashMap<>();
 
     /**
      * Default constructor.
@@ -95,7 +95,7 @@ public final class ConverterRegistry {
      * @return a list of available extensions.
      */
     public Set<String> getAvailableExtensions() {
-        final Set<String> extensions = new HashSet<String>();
+        final Set<String> extensions = new HashSet<>();
         for (final Map.Entry<String, String> e : this.suffix2mimetype
                 .entrySet()) {
             if (this.mimetype2converter.containsKey(e.getValue())) {

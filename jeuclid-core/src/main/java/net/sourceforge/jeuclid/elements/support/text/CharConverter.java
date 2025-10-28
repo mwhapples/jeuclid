@@ -31,12 +31,12 @@ public final class CharConverter {
     /**
      * Char equivalents to be mapped immediately before display.
      */
-    private static final Map<Character, String> LATE_MAP_MAP = new HashMap<Character, String>();
+    private static final Map<Character, String> LATE_MAP_MAP = new HashMap<>();
 
     /**
      * Char equivalents to be mapped when parsing.
      */
-    private static final Map<Character, String> EARLY_MAP_MAP = new HashMap<Character, String>(
+    private static final Map<Character, String> EARLY_MAP_MAP = new HashMap<>(
             200);
 
     private CharConverter() {

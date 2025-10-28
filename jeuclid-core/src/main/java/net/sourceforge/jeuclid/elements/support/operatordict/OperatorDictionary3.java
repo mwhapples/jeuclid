@@ -219,7 +219,7 @@ public final class OperatorDictionary3 extends AbstractOperatorDictionary
                     .intToSpace(lspace), dict);
             this.addAttr(operator, form, OperatorAttribute.RSPACE, this
                     .intToSpace(rspace), dict);
-            if (minsize.length() > 0) {
+            if (!minsize.isEmpty()) {
                 this.addAttr(operator, form, OperatorAttribute.MINSIZE,
                         minsize, dict);
             }
@@ -266,7 +266,7 @@ public final class OperatorDictionary3 extends AbstractOperatorDictionary
             final Map<OperatorAttribute, Map<String, Map<OperatorForm, String>>> dict) {
         final String[] properties = propertiesString.split(" ");
         for (final String property : properties) {
-            if (property.length() > 0) {
+            if (!property.isEmpty()) {
                 try {
                     final OperatorAttribute oa = OperatorAttribute
                             .parseOperatorAttribute(property);
@@ -297,13 +297,13 @@ public final class OperatorDictionary3 extends AbstractOperatorDictionary
         Map<String, Map<OperatorForm, String>> innerMap1 = dict
                 .get(attribute);
         if (innerMap1 == null) {
-            innerMap1 = new HashMap<String, Map<OperatorForm, String>>();
+            innerMap1 = new HashMap<>();
             dict.put(attribute, innerMap1);
         }
 
         Map<OperatorForm, String> innerMap2 = innerMap1.get(operator);
         if (innerMap2 == null) {
-            innerMap2 = new EnumMap<OperatorForm, String>(OperatorForm.class);
+            innerMap2 = new EnumMap<>(OperatorForm.class);
             innerMap1.put(operator, innerMap2);
         }
 

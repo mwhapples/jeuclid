@@ -54,7 +54,7 @@ public class LayoutContextImpl implements MutableLayoutContext, Serializable {
      * Default constructor.
      */
     protected LayoutContextImpl() {
-        this.context = new TreeMap<Parameter, Object>();
+        this.context = new TreeMap<>();
         this.context.put(Parameter.MATHSIZE, Constants.DEFAULT_FONTSIZE);
         this.context.put(Parameter.SCRIPTMINSIZE, 8f);
         this.context.put(Parameter.ANTIALIAS_MINSIZE, 10f);
@@ -67,7 +67,7 @@ public class LayoutContextImpl implements MutableLayoutContext, Serializable {
         this.context.put(Parameter.MATHCOLOR, Color.BLACK);
         this.context.put(Parameter.MATHBACKGROUND, null);
 
-        final List<String> fontsSanserif = new ArrayList<String>(12);
+        final List<String> fontsSanserif = new ArrayList<>(12);
         fontsSanserif.add("Verdana");
         fontsSanserif.add("Helvetica");
         fontsSanserif.add("Arial");
@@ -84,7 +84,7 @@ public class LayoutContextImpl implements MutableLayoutContext, Serializable {
         this.context.put(Parameter.FONTS_SANSSERIF, Collections
                 .unmodifiableList(fontsSanserif));
 
-        final List<String> fontsSerif = new ArrayList<String>(10);
+        final List<String> fontsSerif = new ArrayList<>(10);
         fontsSerif.add("Constantina");
         fontsSerif.add("Cambria");
         fontsSerif.add("Times");
@@ -99,7 +99,7 @@ public class LayoutContextImpl implements MutableLayoutContext, Serializable {
         this.context.put(Parameter.FONTS_SERIF, Collections
                 .unmodifiableList(fontsSerif));
 
-        final List<String> fontsMonospaced = new ArrayList<String>(10);
+        final List<String> fontsMonospaced = new ArrayList<>(10);
         fontsMonospaced.add("Andale Mono");
         fontsMonospaced.add("Courier");
         fontsMonospaced.add("Courier Mono");
@@ -114,7 +114,7 @@ public class LayoutContextImpl implements MutableLayoutContext, Serializable {
         this.context.put(Parameter.FONTS_MONOSPACED, Collections
                 .unmodifiableList(fontsMonospaced));
 
-        final List<String> fontsScript = new ArrayList<String>(12);
+        final List<String> fontsScript = new ArrayList<>(12);
         fontsScript.add("EUSM10");
         fontsScript.add("cmsy10");
         fontsScript.add("Math5");
@@ -130,7 +130,7 @@ public class LayoutContextImpl implements MutableLayoutContext, Serializable {
         this.context.put(Parameter.FONTS_SCRIPT, Collections
                 .unmodifiableList(fontsScript));
 
-        final List<String> fontsFraktur = new ArrayList<String>(7);
+        final List<String> fontsFraktur = new ArrayList<>(7);
         fontsFraktur.add("EUFM10");
         fontsFraktur.add("Mathematica6");
         fontsFraktur.add("FetteFraktur");
@@ -141,7 +141,7 @@ public class LayoutContextImpl implements MutableLayoutContext, Serializable {
         this.context.put(Parameter.FONTS_FRAKTUR, Collections
                 .unmodifiableList(fontsFraktur));
 
-        final List<String> fontsDoublestruck = new ArrayList<String>(8);
+        final List<String> fontsDoublestruck = new ArrayList<>(8);
         fontsDoublestruck.add("MSBM10");
         fontsDoublestruck.add("Mathematica7");
         fontsDoublestruck.add("Caslon Open Face");
@@ -166,7 +166,7 @@ public class LayoutContextImpl implements MutableLayoutContext, Serializable {
     public LayoutContextImpl(final LayoutContext copyFromContext) {
 
         if (copyFromContext instanceof LayoutContextImpl) {
-            this.context = new TreeMap<Parameter, Object>(
+            this.context = new TreeMap<>(
                     ((LayoutContextImpl) copyFromContext).getParameters());
         } else {
             throw new UnsupportedOperationException("LayoutContextImpl("

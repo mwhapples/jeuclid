@@ -66,13 +66,13 @@ public final class Mmultiscripts extends AbstractScriptElement implements
 
     private static final int STATE_PRESUPER = 3;
 
-    private final List<JEuclidElement> postsubscripts = new ArrayList<JEuclidElement>();
+    private final List<JEuclidElement> postsubscripts = new ArrayList<>();
 
-    private final List<JEuclidElement> postsuperscripts = new ArrayList<JEuclidElement>();
+    private final List<JEuclidElement> postsuperscripts = new ArrayList<>();
 
-    private final List<JEuclidElement> presubscripts = new ArrayList<JEuclidElement>();
+    private final List<JEuclidElement> presubscripts = new ArrayList<>();
 
-    private final List<JEuclidElement> presuperscripts = new ArrayList<JEuclidElement>();
+    private final List<JEuclidElement> presuperscripts = new ArrayList<>();
 
     private boolean inRewriteChildren;
 
@@ -270,7 +270,7 @@ public final class Mmultiscripts extends AbstractScriptElement implements
     /** {@inheritDoc} */
     public MathMLNodeList getPrescripts() {
         final int presubsize = this.presubscripts.size();
-        final List<Node> list = new ArrayList<Node>(2 * presubsize);
+        final List<Node> list = new ArrayList<>(2 * presubsize);
         for (int i = 0; i < presubsize; i++) {
             list.add(this.presubscripts.get(i));
             list.add(this.presuperscripts.get(i));
@@ -281,7 +281,7 @@ public final class Mmultiscripts extends AbstractScriptElement implements
     /** {@inheritDoc} */
     public MathMLNodeList getScripts() {
         final int postsubsize = this.postsubscripts.size();
-        final List<Node> list = new ArrayList<Node>(2 * postsubsize);
+        final List<Node> list = new ArrayList<>(2 * postsubsize);
         for (int i = 0; i < postsubsize; i++) {
             list.add(this.postsubscripts.get(i));
             list.add(this.postsuperscripts.get(i));

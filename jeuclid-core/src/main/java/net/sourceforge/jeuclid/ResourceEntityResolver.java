@@ -55,9 +55,9 @@ public class ResourceEntityResolver implements EntityResolver {
 
     private static final String MML1_SYSTEMID_PATH = "http://www.w3.org/Math/DTD/mathml1";
 
-    private static final Map<String, String> PUBLIC_ID_TO_INTERNAL = new HashMap<String, String>();
+    private static final Map<String, String> PUBLIC_ID_TO_INTERNAL = new HashMap<>();
 
-    private static final Map<String, String> PUBLIC_ID_TO_SYSYEM = new HashMap<String, String>();
+    private static final Map<String, String> PUBLIC_ID_TO_SYSYEM = new HashMap<>();
 
     /**
      * Default constructor.

@@ -56,7 +56,7 @@ public final class ElementListSupport {
     public static List<Node> createListOfChildren(final Node parent) {
         final org.w3c.dom.NodeList childList = parent.getChildNodes();
         final int len = childList.getLength();
-        final List<Node> children = new ArrayList<Node>(len);
+        final List<Node> children = new ArrayList<>(len);
         for (int i = 0; i < len; i++) {
             final Node child = childList.item(i);
             children.add(child);
@@ -76,7 +76,7 @@ public final class ElementListSupport {
             final Node parent) {
         final org.w3c.dom.NodeList childList = parent.getChildNodes();
         final int len = childList.getLength();
-        final List<LayoutableNode> children = new ArrayList<LayoutableNode>(len);
+        final List<LayoutableNode> children = new ArrayList<>(len);
         for (int i = 0; i < len; i++) {
             final Node child = childList.item(i);
             if (child instanceof LayoutableNode) {

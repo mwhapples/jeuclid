@@ -88,7 +88,7 @@ public final class StringUtil {
             return new AttributedString("");
         }
         final StringBuilder builder = new StringBuilder();
-        final List<Font> fonts = new ArrayList<Font>();
+        final List<Font> fonts = new ArrayList<>();
         final String plainString = CharConverter.convertLate(inputString);
 
         for (int i = 0; i < plainString.length(); i++) {

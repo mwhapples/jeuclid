@@ -151,7 +151,7 @@ public final class DocumentElement extends GenericDocument implements
     public Element createElementNS(final String namespaceURI,
             final String qualifiedName) {
         final String ns;
-        if (namespaceURI != null && namespaceURI.length() == 0) {
+        if (namespaceURI != null && namespaceURI.isEmpty()) {
             ns = null;
         } else {
             ns = namespaceURI;

@@ -64,7 +64,7 @@ public final class MathImpl extends AbstractContainer implements
             Object retVal = currentValue;
             final String s0 = MathImpl.this.getAttributeNS(
                     Constants.NS_JEUCLID_EXT, which.getOptionName());
-            if ((s0 != null) && (s0.length() > 0)) {
+            if ((s0 != null) && (!s0.isEmpty())) {
                 retVal = which.fromString(s0);
             } else {
                 retVal = this.getDeprecatedParamValuesFromJEuclidExt(which,
@@ -79,13 +79,13 @@ public final class MathImpl extends AbstractContainer implements
             Object retVal = currentValue;
             final String s = MathImpl.this.getAttributeNS(
                     Constants.NS_OLD_JEUCLID_EXT, which.getOptionName());
-            if ((s != null) && (s.length() > 0)) {
+            if ((s != null) && (!s.isEmpty())) {
                 retVal = which.fromString(s);
             } else {
                 // Support deprecated attributes
                 final String s2 = MathImpl.this.getAttributeNS(
                         Constants.NS_OLD_JEUCLID_EXT, which.toString());
-                if ((s2 != null) && (s2.length() > 0)) {
+                if ((s2 != null) && (!s2.isEmpty())) {
                     retVal = which.fromString(s2);
                 }
             }

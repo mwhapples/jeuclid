@@ -41,7 +41,7 @@ public final class FreeHepInternalDetector {
     private static final Log LOGGER = LogFactory
             .getLog(FreeHepInternalDetector.class);
 
-    private static final Map<String, String> PLUGINS_CLASSES = new HashMap<String, String>();
+    private static final Map<String, String> PLUGINS_CLASSES = new HashMap<>();
 
     private FreeHepInternalDetector() {
         // Empty on purpose

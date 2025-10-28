@@ -51,7 +51,7 @@ public class DefaultFontFactory extends FontFactory {
 	private static final Log LOGGER = LogFactory
 			.getLog(DefaultFontFactory.class);
 
-	private final Map<String, Font[]> fontCache = new ConcurrentHashMap<String, Font[]>();
+	private final Map<String, Font[]> fontCache = new ConcurrentHashMap<>();
 
 	public DefaultFontFactory() {
 	}
@@ -107,7 +107,7 @@ public class DefaultFontFactory extends FontFactory {
 	public Font getFont(final String name, final int style, final float size) {
 		Font font;
 		synchronized (fontLoadLock) {
-			if (this.fontCache.size() == 0) {
+			if (this.fontCache.isEmpty()) {
 				/*
 				 * We have *no* fonts yet, lets auto load all fonts we can find
 				 */
@@ -248,7 +248,7 @@ public class DefaultFontFactory extends FontFactory {
 	@Override
 	public Set<String> listFontNames() {
 		final Set<String> retVal;
-		retVal = new HashSet<String>(this.fontCache.keySet());
+		retVal = new HashSet<>(this.fontCache.keySet());
 		return retVal;
 	}
 }

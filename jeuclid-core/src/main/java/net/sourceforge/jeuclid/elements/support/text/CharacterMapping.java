@@ -91,17 +91,17 @@ public final class CharacterMapping implements Serializable {
      * Default Constructor.
      */
     private CharacterMapping() {
-        this.extractAttrs = new HashMap<Integer, CodePointAndVariant>();
-        this.forceSet = new HashSet<Integer>();
-        this.markSet = new HashSet<Integer>();
-        this.composeAttrs = new EnumMap<FontFamily, Map<Integer, Integer[]>>(
+        this.extractAttrs = new HashMap<>();
+        this.forceSet = new HashSet<>();
+        this.markSet = new HashSet<>();
+        this.composeAttrs = new EnumMap<>(
                 FontFamily.class);
         this.readResolve();
         this.loadUnicodeData();
     }
 
     private Object readResolve() {
-        this.alternatives = new HashMap<CodePointAndVariant, Reference<List<CodePointAndVariant>>>();
+        this.alternatives = new HashMap<>();
         return this;
     }
 
@@ -189,7 +189,7 @@ public final class CharacterMapping implements Serializable {
     private Map<Integer, Integer[]> getFFMap(final FontFamily fam) {
         Map<Integer, Integer[]> ffmap = this.composeAttrs.get(fam);
         if (ffmap == null) {
-            ffmap = new HashMap<Integer, Integer[]>();
+            ffmap = new HashMap<>();
             this.composeAttrs.put(fam, ffmap);
         }
         return ffmap;
@@ -355,14 +355,14 @@ public final class CharacterMapping implements Serializable {
         if (result == null) {
             result = this.reallyGetAllAternatives(cpav, true);
             this.alternatives.put(cpav,
-                    new SoftReference<List<CodePointAndVariant>>(result));
+                    new SoftReference<>(result));
         }
         return result;
     }
 
     private List<CodePointAndVariant> reallyGetAllAternatives(
             final CodePointAndVariant cpav, final boolean useGlyphMapping) {
-        final List<CodePointAndVariant> list = new ArrayList<CodePointAndVariant>(
+        final List<CodePointAndVariant> list = new ArrayList<>(
                 3);
 
         final CodePointAndVariant cpav2 = this.extractUnicodeAttr(cpav);

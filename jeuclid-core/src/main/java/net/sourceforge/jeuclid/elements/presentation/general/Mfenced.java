@@ -146,7 +146,7 @@ public final class Mfenced extends AbstractElementWithDelegates implements
     @Override
     protected List<LayoutableNode> createDelegates() {
         final int contentCount = this.getMathElementCount();
-        final List<LayoutableNode> retVal = new ArrayList<LayoutableNode>(
+        final List<LayoutableNode> retVal = new ArrayList<>(
                 2 * contentCount + 1);
 
         final Mo opOpen = this.createFenceOperator();
@@ -155,7 +155,7 @@ public final class Mfenced extends AbstractElementWithDelegates implements
 
         retVal.add(opOpen);
         final String sep = this.getSeparators();
-        final boolean haveSep = (sep != null) && (sep.length() > 0);
+        final boolean haveSep = (sep != null) && (!sep.isEmpty());
 
         for (int i = 0; i < contentCount; i++) {
             retVal.add(this.getMathElement(i));

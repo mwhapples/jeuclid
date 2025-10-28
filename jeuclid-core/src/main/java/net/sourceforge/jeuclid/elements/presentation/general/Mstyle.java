@@ -135,7 +135,7 @@ public final class Mstyle extends AbstractContainer implements
 
         private Object applyScriptMinsize(final Object parentLevel) {
             final String newMinsize = Mstyle.this.getScriptminsize();
-            if ((newMinsize != null) && (newMinsize.length() > 0)) {
+            if ((newMinsize != null) && (!newMinsize.isEmpty())) {
                 return AttributesHelper.convertSizeToPt(newMinsize,
                         this.context, AttributesHelper.PT);
             } else {
@@ -150,7 +150,7 @@ public final class Mstyle extends AbstractContainer implements
                 attr = "";
             }
             attr = attr.trim();
-            if (attr.length() > 0) {
+            if (!attr.isEmpty()) {
                 final char firstchar = attr.charAt(0);
                 boolean relative = false;
                 if (firstchar == '+') {

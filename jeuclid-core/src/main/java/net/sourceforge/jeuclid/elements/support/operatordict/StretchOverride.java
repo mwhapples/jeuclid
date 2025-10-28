@@ -29,7 +29,7 @@ import net.sourceforge.jeuclid.elements.presentation.token.Mo;
  * @version $Revision$
  */
 public final class StretchOverride {
-    private static final Map<String, String> STRETCHATTR = new HashMap<String, String>();
+    private static final Map<String, String> STRETCHATTR = new HashMap<>();
 
     private StretchOverride() {
         // nothing to do.

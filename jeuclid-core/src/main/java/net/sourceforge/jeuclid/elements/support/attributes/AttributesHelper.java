@@ -151,13 +151,13 @@ public final class AttributesHelper {
 
     private static final float PT_PER_PC = 12.0f;
 
-    private static final Map<String, String> SIZETRANSLATIONS = new HashMap<String, String>();
+    private static final Map<String, String> SIZETRANSLATIONS = new HashMap<>();
 
-    private static final Map<String, Float> RELATIVE_UNITS = new HashMap<String, Float>();
+    private static final Map<String, Float> RELATIVE_UNITS = new HashMap<>();
 
-    private static final Map<String, Float> ABSOLUTE_UNITS = new HashMap<String, Float>();
+    private static final Map<String, Float> ABSOLUTE_UNITS = new HashMap<>();
 
-    private static final Map<String, Color> COLOR_MAPPINGS = new HashMap<String, Color>();
+    private static final Map<String, Color> COLOR_MAPPINGS = new HashMap<>();
 
     /**
      * Logger for this class.
@@ -231,7 +231,7 @@ public final class AttributesHelper {
     public static float convertSizeToPt(final String sizeString,
             final LayoutContext context, final String defaultUnit) {
         final String tSize = AttributesHelper.prepareSizeString(sizeString);
-        if (tSize.length() == 0) {
+        if (tSize.isEmpty()) {
             return 0;
         }
         float retVal;
@@ -253,7 +253,7 @@ public final class AttributesHelper {
                         * AttributesHelper.RELATIVE_UNITS.get(unit);
             } else if (AttributesHelper.ABSOLUTE_UNITS.containsKey(unit)) {
                 retVal = value * AttributesHelper.ABSOLUTE_UNITS.get(unit);
-            } else if (defaultUnit.length() > 0) {
+            } else if (!defaultUnit.isEmpty()) {
                 retVal = AttributesHelper.convertSizeToPt(sizeString
                         + defaultUnit, context, "");
             } else {

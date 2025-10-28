@@ -65,7 +65,7 @@ public final class Mroot extends AbstractRoot {
     /** {@inheritDoc} */
     @Override
     protected List<LayoutableNode> getContent() {
-        final List<LayoutableNode> mList = new ArrayList<LayoutableNode>(1);
+        final List<LayoutableNode> mList = new ArrayList<>(1);
         mList.add((LayoutableNode) this.getRadicand());
         return mList;
     }
