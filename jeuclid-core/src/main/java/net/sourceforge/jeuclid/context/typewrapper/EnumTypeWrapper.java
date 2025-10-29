@@ -54,13 +54,18 @@ public final class EnumTypeWrapper extends AbstractSimpleTypeWrapper {
     }
 
     /** {@inheritDoc} */
-    @SuppressWarnings("unchecked")
     @Override
     public Object fromString(final String value) {
         if (value == null) {
             return null;
         }
-        return Enum.valueOf((Class) this.getValueType(), value);
+        try {
+            return this.getValueType().getMethod("valueOf", String.class).invoke(null, value);
+        } catch (IllegalAccessException | NoSuchMethodException e) {
+            throw new RuntimeException(String.format("Failed to retrieve value %s from enum class %s", value, this.getValueType()), e);
+        } catch (InvocationTargetException e) {
+            throw (RuntimeException)e.getCause();
+        }
     }
 
     /**
