@@ -97,7 +97,7 @@ public final class OperatorDictionary3 extends AbstractOperatorDictionary
      */
     private static OperatorDictionary instance;
 
-    private class PersonalNamespaceContext implements NamespaceContext {
+    private static class PersonalNamespaceContext implements NamespaceContext {
 
         public PersonalNamespaceContext() {
         }

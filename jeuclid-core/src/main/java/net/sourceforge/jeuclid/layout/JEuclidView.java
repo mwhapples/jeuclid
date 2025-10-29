@@ -341,9 +341,7 @@ public class JEuclidView implements AbstractView, LayoutView, EventListener {
         /** {@inheritDoc} */
         @Override
         public String toString() {
-            final StringBuilder b = new StringBuilder();
-            b.append(this.node).append('/').append(this.rect);
-            return b.toString();
+            return String.format("%s/%s", String.valueOf(this.node), this.rect);
         }
 
     }

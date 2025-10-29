@@ -35,6 +35,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.nio.file.Files;
 
 /**
  * Generic converter which uses the registry to do its conversions.
@@ -165,7 +166,7 @@ public final class Converter {
             throws IOException {
 
         final OutputStream outStream = new BufferedOutputStream(
-                new FileOutputStream(outFile));
+                Files.newOutputStream(outFile.toPath()));
         final Dimension result = this.convert(doc, outStream, outFileType,
                 params);
         if (result == null) {

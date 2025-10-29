@@ -123,7 +123,7 @@ public final class OperatorDictionary2 extends AbstractOperatorDictionary
      * The DictionaryReader reads dictionary XML file and initializes Dictionary
      * fields.
      */
-    private class DictionaryReader extends DefaultHandler {
+    private static class DictionaryReader extends DefaultHandler {
         private static final String ELEMENT_ELEMENT = "element";
 
         private String currentOperator;

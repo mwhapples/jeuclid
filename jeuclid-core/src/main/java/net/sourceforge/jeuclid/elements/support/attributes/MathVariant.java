@@ -139,7 +139,7 @@ public final class MathVariant implements Serializable {
      * Logger for this class.
      */
     private static final Log LOGGER = LogFactory
-            .getLog(CharacterMapping.class);
+            .getLog(MathVariant.class);
 
     private static final Set<Integer> WARNED = new HashSet<>();
 

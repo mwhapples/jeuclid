@@ -103,13 +103,6 @@ public class CodePointAndVariant implements Serializable {
     /** {@inheritDoc} */
     @Override
     public String toString() {
-        final StringBuilder b = new StringBuilder();
-        b.append('[');
-        b.append("0x");
-        b.append(Integer.toHexString(this.codePoint));
-        b.append(' ');
-        b.append(this.variant.toString());
-        b.append(']');
-        return b.toString();
+        return String.format("[0x%s %s]", Integer.toHexString(this.codePoint), this.variant.toString());
     }
 }

@@ -50,7 +50,7 @@ public final class TestSuiteProcessor {
     /**
      * Logger for this class
      */
-    private static final Log LOGGER = LogFactory.getLog(Processor.class);
+    private static final Log LOGGER = LogFactory.getLog(TestSuiteProcessor.class);
 
     private final Transformer modificationTransformer;
 

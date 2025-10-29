@@ -163,7 +163,7 @@ public final class AttributesHelper {
      * Logger for this class.
      */
     private static final Log LOGGER = LogFactory
-            .getLog(AbstractJEuclidElement.class);
+            .getLog(AttributesHelper.class);
 
     /**
      * Private constructor: it's forbidden to create instance of this utility
