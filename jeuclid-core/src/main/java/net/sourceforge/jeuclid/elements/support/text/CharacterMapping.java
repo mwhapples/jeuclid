@@ -109,9 +109,8 @@ public final class CharacterMapping implements Serializable {
         final InputStream is = CharacterMapping.class
                 .getResourceAsStream("/net/sourceforge/jeuclid/UnicodeData.txt");
         try {
-            final BufferedReader r = new BufferedReader(
-                    new InputStreamReader(is));
-            try {
+            try (BufferedReader r = new BufferedReader(
+                    new InputStreamReader(is))) {
                 String s;
                 while ((s = r.readLine()) != null) {
                     final String[] c = s.split(";");
@@ -124,13 +123,6 @@ public final class CharacterMapping implements Serializable {
                 }
             } catch (final IOException e) {
                 CharacterMapping.LOGGER.warn(CharacterMapping.LOAD_ERROR, e);
-            } finally {
-                try {
-                    r.close();
-                } catch (final IOException e) {
-                    CharacterMapping.LOGGER.warn(CharacterMapping.LOAD_ERROR,
-                            e);
-                }
             }
         } catch (final NullPointerException e) {
             CharacterMapping.LOGGER.warn(CharacterMapping.LOAD_ERROR, e);
@@ -178,20 +170,12 @@ public final class CharacterMapping implements Serializable {
 
     private Integer[] getMapsTo(final int mapsTo,
             final Map<Integer, Integer[]> ffmap) {
-        Integer[] ia = ffmap.get(mapsTo);
-        if (ia == null) {
-            ia = new Integer[Font.BOLD + Font.ITALIC + 1];
-            ffmap.put(mapsTo, ia);
-        }
+        Integer[] ia = ffmap.computeIfAbsent(mapsTo, k -> new Integer[Font.BOLD + Font.ITALIC + 1]);
         return ia;
     }
 
     private Map<Integer, Integer[]> getFFMap(final FontFamily fam) {
-        Map<Integer, Integer[]> ffmap = this.composeAttrs.get(fam);
-        if (ffmap == null) {
-            ffmap = new HashMap<>();
-            this.composeAttrs.put(fam, ffmap);
-        }
+        Map<Integer, Integer[]> ffmap = this.composeAttrs.computeIfAbsent(fam, k -> new HashMap<>());
         return ffmap;
     }
 

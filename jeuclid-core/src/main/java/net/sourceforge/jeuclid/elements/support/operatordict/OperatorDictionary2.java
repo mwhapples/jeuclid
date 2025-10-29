@@ -100,10 +100,8 @@ public final class OperatorDictionary2 extends AbstractOperatorDictionary
     @Override
     protected void initializeFromXML(
             final Map<OperatorAttribute, Map<String, Map<OperatorForm, String>>> dict) {
-        InputStream dictInput = null;
-        try {
-            dictInput = OperatorDictionary2.class
-                    .getResourceAsStream(OperatorDictionary2.DICTIONARY_FILE);
+        try (InputStream dictInput = OperatorDictionary2.class
+                .getResourceAsStream(OperatorDictionary2.DICTIONARY_FILE)) {
             final SAXParserFactory factory = SAXParserFactory.newInstance();
             final XMLReader reader = factory.newSAXParser().getXMLReader();
             reader.setContentHandler(new DictionaryReader(dict));
@@ -118,15 +116,6 @@ public final class OperatorDictionary2 extends AbstractOperatorDictionary
         } catch (final IOException e) {
             OperatorDictionary2.LOGGER.warn(
                     "Read error while accessing XML dictionary", e);
-        } finally {
-            if (dictInput != null) {
-                try {
-                    dictInput.close();
-                } catch (final IOException io) {
-                    OperatorDictionary2.LOGGER.warn(
-                            "Error closing XML dictionary", io);
-                }
-            }
         }
     }
 
@@ -207,18 +196,10 @@ public final class OperatorDictionary2 extends AbstractOperatorDictionary
                             .getKey();
                     final String value = attributeValues.getValue();
                     Map<String, Map<OperatorForm, String>> mapForAttr = this.dict
-                            .get(attribute);
-                    if (mapForAttr == null) {
-                        mapForAttr = new TreeMap<>();
-                        this.dict.put(attribute, mapForAttr);
-                    }
+                            .computeIfAbsent(attribute, k -> new TreeMap<>());
                     Map<OperatorForm, String> valueForForm = mapForAttr
-                            .get(this.currentOperator);
-                    if (valueForForm == null) {
-                        valueForForm = new EnumMap<>(
-                                OperatorForm.class);
-                        mapForAttr.put(this.currentOperator, valueForForm);
-                    }
+                            .computeIfAbsent(this.currentOperator, k -> new EnumMap<>(
+                                    OperatorForm.class));
                     valueForForm.put(this.currentFormIndex, value);
                 }
             }

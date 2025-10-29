@@ -42,12 +42,7 @@ import java.util.Set;
  */
 public abstract class FontFactory {
 
-	private static ThreadLocal<FontFactory> THREAD_FONT_FACTORY = new ThreadLocal<FontFactory>() {
-		@Override
-		protected FontFactory initialValue() {
-			return null;
-		}
-	};
+	private static ThreadLocal<FontFactory> THREAD_FONT_FACTORY = ThreadLocal.withInitial(() -> null);
 
 	/**
 	 * Sets a font factory implementation to be used by this thread.

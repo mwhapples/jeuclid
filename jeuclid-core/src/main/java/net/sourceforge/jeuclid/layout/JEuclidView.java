@@ -267,11 +267,7 @@ public class JEuclidView implements AbstractView, LayoutView, EventListener {
         if (node == null) {
             return null;
         }
-        LayoutInfo info = this.layoutMap.get(node);
-        if (info == null) {
-            info = new LayoutInfoImpl();
-            this.layoutMap.put(node, info);
-        }
+        LayoutInfo info = this.layoutMap.computeIfAbsent(node, k -> new LayoutInfoImpl());
         return info;
     }
 

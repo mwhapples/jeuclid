@@ -295,17 +295,9 @@ public final class OperatorDictionary3 extends AbstractOperatorDictionary
             final Map<OperatorAttribute, Map<String, Map<OperatorForm, String>>> dict) {
 
         Map<String, Map<OperatorForm, String>> innerMap1 = dict
-                .get(attribute);
-        if (innerMap1 == null) {
-            innerMap1 = new HashMap<>();
-            dict.put(attribute, innerMap1);
-        }
+                .computeIfAbsent(attribute, k -> new HashMap<>());
 
-        Map<OperatorForm, String> innerMap2 = innerMap1.get(operator);
-        if (innerMap2 == null) {
-            innerMap2 = new EnumMap<>(OperatorForm.class);
-            innerMap1.put(operator, innerMap2);
-        }
+        Map<OperatorForm, String> innerMap2 = innerMap1.computeIfAbsent(operator, k -> new EnumMap<>(OperatorForm.class));
 
         innerMap2.put(form, value);
     }
