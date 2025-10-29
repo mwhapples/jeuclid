@@ -45,4 +45,4 @@ public interface MathMLAlignGroupElement extends MathMLPresentationElement {
      * @see #getGroupalign()
      */
     void setGroupalign(String groupalign);
-};
+}

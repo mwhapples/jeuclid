@@ -58,4 +58,4 @@ public interface MathMLAnnotationElement extends MathMLElement {
      * @see #getEncoding()
      */
     void setEncoding(String encoding);
-};
+}

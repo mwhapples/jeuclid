@@ -43,4 +43,4 @@ public interface MathMLConditionElement extends MathMLContentElement {
      * @see #getCondition()
      */
     void setCondition(MathMLApplyElement condition);
-};
+}

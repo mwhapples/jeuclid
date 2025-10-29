@@ -254,4 +254,4 @@ public interface MathMLContainer {
      *             of child declare elements.
      */
     void deleteDeclaration(int index) throws DOMException;
-};
+}

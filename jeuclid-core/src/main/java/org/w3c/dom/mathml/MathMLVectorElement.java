@@ -116,4 +116,4 @@ public interface MathMLVectorElement extends MathMLContentElement {
      * @return The MathMLContentElement component being removed.
      */
     MathMLContentElement removeComponent(int index);
-};
+}

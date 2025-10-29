@@ -63,4 +63,4 @@ public interface MathMLMathElement extends MathMLElement, MathMLContainer {
      * @see #getDisplay()
      */
     void setDisplay(String display);
-};
+}

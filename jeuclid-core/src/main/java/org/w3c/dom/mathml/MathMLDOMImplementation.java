@@ -42,4 +42,4 @@ public interface MathMLDOMImplementation extends DOMImplementation {
      * @return The MathMLDocument created.
      */
     MathMLDocument createMathMLDocument();
-};
+}

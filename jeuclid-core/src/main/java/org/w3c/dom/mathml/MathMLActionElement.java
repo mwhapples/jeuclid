@@ -61,4 +61,4 @@ public interface MathMLActionElement extends MathMLPresentationContainer {
      * @see #getSelection()
      */
     void setSelection(String selection);
-};
+}

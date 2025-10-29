@@ -163,4 +163,4 @@ public interface MathMLTableRowElement extends MathMLPresentationElement {
      *            MathMLLabeledRowElement!
      */
     void deleteCell(int index);
-};
+}

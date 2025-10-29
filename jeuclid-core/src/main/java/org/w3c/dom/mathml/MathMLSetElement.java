@@ -53,4 +53,4 @@ public interface MathMLSetElement extends MathMLContentContainer {
      * @see #getType()
      */
     void setType(String type);
-};
+}

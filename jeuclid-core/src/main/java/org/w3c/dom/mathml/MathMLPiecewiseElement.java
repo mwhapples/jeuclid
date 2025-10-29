@@ -222,4 +222,4 @@ public interface MathMLPiecewiseElement extends MathMLContentElement {
      */
     MathMLContentElement setCaseCondition(int index,
             MathMLContentElement condition) throws DOMException;
-};
+}

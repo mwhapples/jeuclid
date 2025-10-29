@@ -139,4 +139,4 @@ public interface MathMLSemanticsElement extends MathMLElement {
      *         deleted.
      */
     MathMLElement removeAnnotation(int index);
-};
+}

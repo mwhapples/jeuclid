@@ -52,7 +52,7 @@ public final class JEuclidElementFactory {
     private static final Log LOGGER = LogFactory
             .getLog(JEuclidElementFactory.class);
 
-    private static final Map<String, Constructor<? extends JEuclidElement>> IMPL_CLASSES = new HashMap<>();;
+    private static final Map<String, Constructor<? extends JEuclidElement>> IMPL_CLASSES = new HashMap<>();
 
     private JEuclidElementFactory() {
         // Empty on purpose

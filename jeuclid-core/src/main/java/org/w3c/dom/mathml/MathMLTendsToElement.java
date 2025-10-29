@@ -47,4 +47,4 @@ public interface MathMLTendsToElement extends MathMLPredefinedSymbol {
      * @see #getType()
      */
     void setType(String type);
-};
+}

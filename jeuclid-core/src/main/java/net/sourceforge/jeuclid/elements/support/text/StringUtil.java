@@ -362,7 +362,7 @@ public final class StringUtil {
             return this.width;
         }
 
-    };
+    }
 
     /**
      * Retrieve the actual layout information from a textLayout. This is

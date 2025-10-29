@@ -60,7 +60,7 @@ public final class NumberTypeWrapper extends AbstractSimpleTypeWrapper {
         try {
             return this.getValueType().getConstructor(
                     new Class[] { String.class }).newInstance(
-                    new Object[] { value });
+                    value);
         } catch (final NoSuchMethodException | IllegalAccessException | InstantiationException |
                        InvocationTargetException e) {
             throw new IllegalArgumentException(TypeWrapper.FAILED_TO_CONVERT

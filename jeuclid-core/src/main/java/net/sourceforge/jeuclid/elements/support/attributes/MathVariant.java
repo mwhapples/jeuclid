@@ -158,7 +158,7 @@ public final class MathVariant implements Serializable {
     public MathVariant(final int awtstyle, final FontFamily family) {
         this.awtStyle = awtstyle;
         this.fontFamily = family;
-    };
+    }
 
     /**
      * Creates a Mathvariant object from an attribute value.

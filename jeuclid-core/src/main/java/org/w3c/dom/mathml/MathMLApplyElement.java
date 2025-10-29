@@ -80,4 +80,4 @@ public interface MathMLApplyElement extends MathMLContentContainer {
      * @see #getUpLimit()
      */
     void setUpLimit(MathMLElement upLimit);
-};
+}

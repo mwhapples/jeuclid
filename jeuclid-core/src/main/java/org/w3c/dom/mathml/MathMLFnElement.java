@@ -62,4 +62,4 @@ public interface MathMLFnElement extends MathMLContentContainer {
      * @see #getEncoding()
      */
     void setEncoding(String encoding);
-};
+}

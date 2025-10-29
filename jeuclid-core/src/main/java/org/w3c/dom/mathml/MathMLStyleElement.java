@@ -379,4 +379,4 @@ public interface MathMLStyleElement extends MathMLPresentationContainer {
      */
     void setNegativeveryverythickmathspace(
             String negativeveryverythickmathspace);
-};
+}

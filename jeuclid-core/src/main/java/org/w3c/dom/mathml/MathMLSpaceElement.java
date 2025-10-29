@@ -98,4 +98,4 @@ public interface MathMLSpaceElement extends MathMLPresentationElement {
      * @see #getLinebreak()
      */
     void setLinebreak(String linebreak);
-};
+}

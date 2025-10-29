@@ -75,4 +75,4 @@ public interface MathMLGlyphElement extends MathMLPresentationElement {
      * @see #getIndex()
      */
     void setIndex(int index);
-};
+}

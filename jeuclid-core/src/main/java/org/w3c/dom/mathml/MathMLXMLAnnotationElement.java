@@ -42,4 +42,4 @@ public interface MathMLXMLAnnotationElement extends MathMLElement {
      * @see #getEncoding()
      */
     void setEncoding(String encoding);
-};
+}

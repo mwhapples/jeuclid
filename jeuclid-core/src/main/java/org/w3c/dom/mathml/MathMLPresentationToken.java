@@ -124,4 +124,4 @@ public interface MathMLPresentationToken extends MathMLPresentationElement {
      * @return value of the contents attribute.
      */
     MathMLNodeList getContents();
-};
+}

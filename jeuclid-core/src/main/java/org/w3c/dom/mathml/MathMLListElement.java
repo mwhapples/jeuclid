@@ -53,4 +53,4 @@ public interface MathMLListElement extends MathMLContentContainer {
      * @see #getOrdering()
      */
     void setOrdering(String ordering);
-};
+}

@@ -82,4 +82,4 @@ public interface MathMLIntervalElement extends MathMLContentElement {
      * @see #getEnd()
      */
     void setEnd(MathMLContentElement end);
-};
+}

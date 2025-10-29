@@ -147,4 +147,4 @@ public interface MathMLContentToken extends MathMLContentElement {
      * @return A Node representing the deleted argument.
      */
     Node removeArgument(int index);
-};
+}

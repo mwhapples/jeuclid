@@ -66,4 +66,4 @@ public interface MathMLCaseElement extends MathMLContentElement {
      * @see #getCaseValue()
      */
     void setCaseValue(MathMLContentElement caseValue);
-};
+}

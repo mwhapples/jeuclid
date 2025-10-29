@@ -47,4 +47,4 @@ public interface MathMLLabeledRowElement extends MathMLTableRowElement {
      * @see #getLabel()
      */
     void setLabel(MathMLElement label);
-};
+}

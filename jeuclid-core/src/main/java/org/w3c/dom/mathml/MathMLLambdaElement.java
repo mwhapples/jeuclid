@@ -45,4 +45,4 @@ public interface MathMLLambdaElement extends MathMLContentContainer {
      * @see #getExpression()
      */
     void setExpression(MathMLElement expression);
-};
+}

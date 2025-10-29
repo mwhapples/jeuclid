@@ -225,4 +225,4 @@ public interface MathMLOperatorElement extends MathMLPresentationToken {
      * @see #getAccent()
      */
     void setAccent(String accent);
-};
+}

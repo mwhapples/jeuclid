@@ -62,4 +62,4 @@ public interface MathMLRadicalElement extends MathMLPresentationElement {
      * @see #getIndex()
      */
     void setIndex(MathMLElement index);
-};
+}

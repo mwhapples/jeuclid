@@ -47,4 +47,4 @@ public interface MathMLEncloseElement extends MathMLPresentationContainer {
      * @see #getNotation()
      */
     void setNotation(String notation);
-};
+}

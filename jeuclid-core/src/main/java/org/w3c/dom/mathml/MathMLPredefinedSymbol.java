@@ -93,4 +93,4 @@ public interface MathMLPredefinedSymbol extends MathMLContentElement {
      * @return value of the symbolName attribute.
      */
     String getSymbolName();
-};
+}

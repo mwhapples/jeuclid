@@ -504,4 +504,4 @@ public interface MathMLTableElement extends MathMLPresentationElement {
      *             minus this number.
      */
     MathMLTableRowElement removeRow(long index) throws DOMException;
-};
+}

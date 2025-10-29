@@ -123,4 +123,4 @@ public interface MathMLElement extends Element {
      * @return value of the ownerMathElement attribute.
      */
     MathMLMathElement getOwnerMathElement();
-};
+}

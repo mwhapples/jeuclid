@@ -68,4 +68,4 @@ public interface MathMLCnElement extends MathMLContentToken {
      * @return value of the nargs attribute.
      */
     int getNargs();
-};
+}

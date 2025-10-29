@@ -78,4 +78,4 @@ public interface MathMLFencedElement extends MathMLPresentationContainer {
      * @see #getSeparators()
      */
     void setSeparators(String separators);
-};
+}

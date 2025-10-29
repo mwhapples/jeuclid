@@ -338,7 +338,7 @@ public final class Menclose extends AbstractElementWithDelegates implements
      */
     private static final Log LOGGER = LogFactory.getLog(Menclose.class);
 
-    private static final Map<String, Constructor<?>> IMPL_CLASSES = new HashMap<>();;
+    private static final Map<String, Constructor<?>> IMPL_CLASSES = new HashMap<>();
 
     private static final long serialVersionUID = 1L;
 
@@ -385,7 +385,7 @@ public final class Menclose extends AbstractElementWithDelegates implements
         final Stack<Constructor<?>> notationImpls = this.parseNotations();
         JEuclidElement lastChild = this.ensureSingleChild();
         lastChild = this.createStackOfDelegates(notationImpls, lastChild);
-        return Collections.singletonList((LayoutableNode) lastChild);
+        return Collections.singletonList(lastChild);
     }
 
     private JEuclidElement createStackOfDelegates(

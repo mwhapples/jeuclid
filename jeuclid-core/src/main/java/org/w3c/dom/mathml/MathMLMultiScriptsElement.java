@@ -373,4 +373,4 @@ public interface MathMLMultiScriptsElement extends MathMLPresentationElement {
      */
     MathMLElement setSuperScriptAt(int colIndex, MathMLElement newScript)
             throws DOMException;
-};
+}

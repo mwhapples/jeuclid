@@ -59,4 +59,4 @@ public interface MathMLDocument extends Document {
      * @return value of the URI attribute.
      */
     String getURI();
-};
+}

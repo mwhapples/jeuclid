@@ -23,6 +23,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
+import java.nio.file.Files;
 
 import javax.annotation.concurrent.ThreadSafe;
 import javax.xml.parsers.DocumentBuilder;
@@ -121,7 +122,7 @@ public final class MathMLParserSupport {
     public static Document parseFile(final File inFile) throws SAXException,
             IOException {
         return Parser.getInstance().parseStreamSource(
-                new StreamSource(new FileInputStream(inFile)));
+                new StreamSource(Files.newInputStream(inFile.toPath())));
     }
 
     /**

@@ -217,4 +217,4 @@ public interface MathMLContentContainer extends MathMLContentElement,
      * @return The MathMLBvarElement being removed.
      */
     MathMLBvarElement removeBoundVariable(int index);
-};
+}

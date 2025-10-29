@@ -35,4 +35,4 @@ import org.w3c.dom.NodeList;
  * 
  */
 public interface MathMLNodeList extends NodeList {
-};
+}

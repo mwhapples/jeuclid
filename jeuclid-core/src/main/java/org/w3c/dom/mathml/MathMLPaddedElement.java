@@ -96,4 +96,4 @@ public interface MathMLPaddedElement extends MathMLPresentationContainer {
      * @see #getDepth()
      */
     void setDepth(String depth);
-};
+}

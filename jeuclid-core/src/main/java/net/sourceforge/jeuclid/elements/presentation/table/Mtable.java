@@ -185,7 +185,7 @@ public final class Mtable extends AbstractTableElement implements
             }
             return retVal;
         }
-    };
+    }
 
     /**
      * Class for alignment types.

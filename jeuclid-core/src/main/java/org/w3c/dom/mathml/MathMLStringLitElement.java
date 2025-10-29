@@ -62,4 +62,4 @@ public interface MathMLStringLitElement extends MathMLPresentationToken {
      * @see #getRquote()
      */
     void setRquote(String rquote);
-};
+}

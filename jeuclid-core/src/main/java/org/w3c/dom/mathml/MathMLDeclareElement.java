@@ -146,4 +146,4 @@ public interface MathMLDeclareElement extends MathMLContentElement {
      * @see #getConstructor()
      */
     void setConstructor(MathMLElement constructor);
-};
+}

@@ -45,4 +45,4 @@ public interface MathMLAlignMarkElement extends MathMLPresentationElement {
      * @see #getEdge()
      */
     void setEdge(String edge);
-};
+}

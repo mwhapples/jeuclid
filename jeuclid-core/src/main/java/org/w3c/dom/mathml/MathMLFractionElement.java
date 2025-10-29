@@ -129,4 +129,4 @@ public interface MathMLFractionElement extends MathMLPresentationElement {
      * @see #getDenominator()
      */
     void setDenominator(MathMLElement denominator);
-};
+}

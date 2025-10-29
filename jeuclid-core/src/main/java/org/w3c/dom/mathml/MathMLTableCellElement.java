@@ -134,4 +134,4 @@ public interface MathMLTableCellElement extends MathMLPresentationContainer {
      * @return value of the cellindex attribute.
      */
     String getCellindex();
-};
+}

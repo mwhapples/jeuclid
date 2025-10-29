@@ -44,4 +44,4 @@ public interface MathMLCiElement extends MathMLContentToken {
      * @see #getType()
      */
     void setType(String type);
-};
+}

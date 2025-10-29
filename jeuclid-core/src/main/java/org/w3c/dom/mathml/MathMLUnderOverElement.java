@@ -124,4 +124,4 @@ public interface MathMLUnderOverElement extends MathMLPresentationElement {
      *             HIERARCHY_REQUEST_ERR: Raised when the element is a munder.
      */
     void setOverscript(MathMLElement overscript);
-};
+}

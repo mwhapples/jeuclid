@@ -117,4 +117,4 @@ public interface MathMLMatrixrowElement extends MathMLContentElement {
      *             of entries in the row.
      */
     MathMLContentElement removeEntry(int index) throws DOMException;
-};
+}

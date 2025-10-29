@@ -123,4 +123,4 @@ public interface MathMLScriptElement extends MathMLPresentationElement {
      *             HIERARCHY_REQUEST_ERR: Raised when the element is a msub.
      */
     void setSuperscript(MathMLElement superscript);
-};
+}
