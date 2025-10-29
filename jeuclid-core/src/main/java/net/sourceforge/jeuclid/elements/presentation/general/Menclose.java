@@ -400,11 +400,7 @@ public final class Menclose extends AbstractElementWithDelegates implements
                                 this.ownerDocument);
                 element.appendChild(lastChild);
                 lastChild = element;
-            } catch (final InstantiationException e) {
-                Menclose.LOGGER.warn(e);
-            } catch (final IllegalAccessException e) {
-                Menclose.LOGGER.warn(e);
-            } catch (final InvocationTargetException e) {
+            } catch (final InstantiationException | IllegalAccessException | InvocationTargetException e) {
                 Menclose.LOGGER.warn(e);
             }
         }

@@ -61,16 +61,8 @@ public final class NumberTypeWrapper extends AbstractSimpleTypeWrapper {
             return this.getValueType().getConstructor(
                     new Class[] { String.class }).newInstance(
                     new Object[] { value });
-        } catch (final NoSuchMethodException e) {
-            throw new IllegalArgumentException(TypeWrapper.FAILED_TO_CONVERT
-                    + value + TypeWrapper.TO + this.getValueType(), e);
-        } catch (final IllegalAccessException e) {
-            throw new IllegalArgumentException(TypeWrapper.FAILED_TO_CONVERT
-                    + value + TypeWrapper.TO + this.getValueType(), e);
-        } catch (final InstantiationException e) {
-            throw new IllegalArgumentException(TypeWrapper.FAILED_TO_CONVERT
-                    + value + TypeWrapper.TO + this.getValueType(), e);
-        } catch (final InvocationTargetException e) {
+        } catch (final NoSuchMethodException | IllegalAccessException | InstantiationException |
+                       InvocationTargetException e) {
             throw new IllegalArgumentException(TypeWrapper.FAILED_TO_CONVERT
                     + value + TypeWrapper.TO + this.getValueType(), e);
         }

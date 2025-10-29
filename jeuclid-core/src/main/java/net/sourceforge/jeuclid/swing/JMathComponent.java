@@ -320,11 +320,7 @@ public final class JMathComponent extends JComponent implements
             final DocumentElement jEuclidDom = DOMBuilder.getInstance().createJeuclidDom(stdDomNode,
                     true, true);
             this.setDocument(jEuclidDom);
-        } catch (final SAXException e) {
-            throw new IllegalArgumentException(e);
-        } catch (final ParserConfigurationException e) {
-            throw new IllegalArgumentException(e);
-        } catch (final IOException e) {
+        } catch (final SAXException | ParserConfigurationException | IOException e) {
             throw new IllegalArgumentException(e);
         }
 

@@ -284,7 +284,7 @@ public final class AttributesHelper {
         }
         if (tSize.endsWith(AttributesHelper.PERCENT_SIGN)) {
             // A nice trick because all other units are exactly 2 chars long.
-            tSize = new StringBuilder(tSize).append(' ').toString();
+            tSize += ' ';
         }
         return tSize;
     }

@@ -216,15 +216,12 @@ public final class DOMBuilder {
             synchronized (transformer) {
                 transformer.transform(source, result);
             }
-        } catch (final TransformerException e) {
+        } catch (final TransformerException | DOMException e) {
             d = null;
             DOMBuilder.LOGGER.warn(e.getMessage());
         } catch (final NullPointerException e) {
             d = null;
             // Happens if the stylesheet was not loaded correctly
-            DOMBuilder.LOGGER.warn(e.getMessage());
-        } catch (final DOMException e) {
-            d = null;
             DOMBuilder.LOGGER.warn(e.getMessage());
         }
         return d;

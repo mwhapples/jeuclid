@@ -72,15 +72,7 @@ public final class EnumTypeWrapper extends AbstractSimpleTypeWrapper {
         try {
             return (Object[]) this.getValueType().getMethod("values").invoke(
                     null);
-        } catch (final InvocationTargetException e) {
-            throw new RuntimeException(
-                    EnumTypeWrapper.FAILED_TO_RETRIEVE_VALUES_OF_ENUM_CLASS
-                            + this.getValueType(), e);
-        } catch (final IllegalAccessException e) {
-            throw new RuntimeException(
-                    EnumTypeWrapper.FAILED_TO_RETRIEVE_VALUES_OF_ENUM_CLASS
-                            + this.getValueType(), e);
-        } catch (final NoSuchMethodException e) {
+        } catch (final InvocationTargetException | IllegalAccessException | NoSuchMethodException e) {
             throw new RuntimeException(
                     EnumTypeWrapper.FAILED_TO_RETRIEVE_VALUES_OF_ENUM_CLASS
                             + this.getValueType(), e);

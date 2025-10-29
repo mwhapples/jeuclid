@@ -223,13 +223,7 @@ public final class CharacterMapping implements Serializable {
                 final ObjectInput oi = new ObjectInputStream(is);
                 m = (CharacterMapping) oi.readObject();
                 oi.close();
-            } catch (final ClassNotFoundException cnfe) {
-                m = null;
-            } catch (final IllegalArgumentException e) {
-                m = null;
-            } catch (final IOException e) {
-                m = null;
-            } catch (final NullPointerException e) {
+            } catch (final ClassNotFoundException | IllegalArgumentException | IOException | NullPointerException cnfe) {
                 m = null;
             }
             if (m == null) {

@@ -84,13 +84,7 @@ public abstract class AbstractOperatorDictionary implements OperatorDictionary,
             final ObjectInput oi = new ObjectInputStream(is);
             newDict = (AbstractOperatorDictionary) oi.readObject();
             oi.close();
-        } catch (final ClassNotFoundException cnfe) {
-            newDict = null;
-        } catch (final IllegalArgumentException e) {
-            newDict = null;
-        } catch (final IOException e) {
-            newDict = null;
-        } catch (final NullPointerException e) {
+        } catch (final ClassNotFoundException | IllegalArgumentException | IOException | NullPointerException cnfe) {
             newDict = null;
         }
         return newDict;

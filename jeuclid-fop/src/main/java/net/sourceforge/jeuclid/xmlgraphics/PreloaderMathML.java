@@ -125,15 +125,7 @@ public class PreloaderMathML extends AbstractImagePreloader {
                     .getNodeName()))) {
                 n = null;
             }
-        } catch (final IOException e) {
-            n = null;
-        } catch (final SAXException e) {
-            n = null;
-        } catch (final IllegalArgumentException e) {
-            n = null;
-        } catch (final NullPointerException e) {
-            // Due to a bug in xmlgraphics-commons 1.3.1 which sometimes
-            // creates wrapper around null streams if files do not exist.
+        } catch (final IOException | SAXException | IllegalArgumentException | NullPointerException e) {
             n = null;
         }
         try {

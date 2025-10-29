@@ -62,15 +62,8 @@ public final class BatikDetector implements ConverterDetector {
         } catch (final RuntimeException e) {
             // CHECKSYTLE:ON
             impl = null;
-        } catch (final LinkageError e) {
-            impl = null;
-        } catch (final ClassNotFoundException e) {
-            impl = null;
-        } catch (final NoSuchMethodException e) {
-            impl = null;
-        } catch (final IllegalAccessException e) {
-            impl = null;
-        } catch (final InvocationTargetException e) {
+        } catch (final LinkageError | ClassNotFoundException | NoSuchMethodException | IllegalAccessException |
+                       InvocationTargetException e) {
             impl = null;
         }
         if (impl == null) {

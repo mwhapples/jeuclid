@@ -79,13 +79,8 @@ public class FreeHepConverter implements ConverterPlugin {
             final Dimension d) throws IOException {
         try {
             return this.streamConst.newInstance(os, d);
-        } catch (final InvocationTargetException e) {
-            throw new IOException(e.toString());
-        } catch (final IllegalArgumentException e) {
-            throw new IOException(e.toString());
-        } catch (final InstantiationException e) {
-            throw new IOException(e.toString());
-        } catch (final IllegalAccessException e) {
+        } catch (final InvocationTargetException | IllegalArgumentException | InstantiationException |
+                       IllegalAccessException e) {
             throw new IOException(e.toString());
         }
     }

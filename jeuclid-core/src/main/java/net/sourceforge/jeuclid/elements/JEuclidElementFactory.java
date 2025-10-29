@@ -113,11 +113,7 @@ public final class JEuclidElementFactory {
                 try {
                     element = con.newInstance(qualifiedName,
                             ownerDocument);
-                } catch (final InstantiationException e) {
-                    element = null;
-                } catch (final IllegalAccessException e) {
-                    element = null;
-                } catch (final InvocationTargetException e) {
+                } catch (final InstantiationException | IllegalAccessException | InvocationTargetException e) {
                     element = null;
                 }
             }
@@ -135,11 +131,7 @@ public final class JEuclidElementFactory {
             final String tag = (String) f.get(null);
             JEuclidElementFactory.IMPL_CLASSES.put(tag, c.getConstructor(
                     String.class, AbstractDocument.class));
-        } catch (final NoSuchFieldException e) {
-            JEuclidElementFactory.LOGGER.warn(c.toString(), e);
-        } catch (final NoSuchMethodException e) {
-            JEuclidElementFactory.LOGGER.warn(c.toString(), e);
-        } catch (final IllegalAccessException e) {
+        } catch (final NoSuchFieldException | NoSuchMethodException | IllegalAccessException e) {
             JEuclidElementFactory.LOGGER.warn(c.toString(), e);
         }
     }

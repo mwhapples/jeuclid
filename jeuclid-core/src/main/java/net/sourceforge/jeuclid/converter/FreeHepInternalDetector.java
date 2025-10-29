@@ -69,19 +69,9 @@ public final class FreeHepInternalDetector {
                         .loadClass(e.getValue());
                 FreeHepInternalDetector.actuallyRegister(registry, fileType,
                         graphicsClass);
-            } catch (final NoSuchMethodException ex) {
-                FreeHepInternalDetector.LOGGER.debug(ex);
-            } catch (final ClassNotFoundException ex) {
-                FreeHepInternalDetector.LOGGER.debug(ex);
-            } catch (final IllegalArgumentException ex) {
-                FreeHepInternalDetector.LOGGER.debug(ex);
-            } catch (final SecurityException ex) {
-                FreeHepInternalDetector.LOGGER.debug(ex);
-            } catch (final InstantiationException ex) {
-                FreeHepInternalDetector.LOGGER.debug(ex);
-            } catch (final IllegalAccessException ex) {
-                FreeHepInternalDetector.LOGGER.debug(ex);
-            } catch (final InvocationTargetException ex) {
+            } catch (final NoSuchMethodException | ClassNotFoundException | IllegalArgumentException |
+                           SecurityException | InstantiationException | IllegalAccessException |
+                           InvocationTargetException ex) {
                 FreeHepInternalDetector.LOGGER.debug(ex);
             }
         }
