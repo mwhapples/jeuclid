@@ -58,7 +58,7 @@ public class JEuclidElementMapping extends ElementMapping {
     @Override
     protected void initialize() {
         if (this.foObjs == null) {
-            this.foObjs = new HashMap();
+            this.foObjs = new HashMap<>();
             this.foObjs.put("math", new ME());
             this.foObjs.put(ElementMapping.DEFAULT, new MathMLMaker());
 
