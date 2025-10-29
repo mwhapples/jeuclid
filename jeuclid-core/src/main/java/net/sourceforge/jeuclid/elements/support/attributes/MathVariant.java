@@ -29,7 +29,6 @@ import java.util.Set;
 
 import net.sourceforge.jeuclid.LayoutContext;
 import net.sourceforge.jeuclid.context.Parameter;
-import net.sourceforge.jeuclid.elements.support.text.CharacterMapping;
 import net.sourceforge.jeuclid.font.FontFactory;
 
 import org.apache.commons.logging.Log;
