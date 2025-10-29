@@ -53,12 +53,10 @@ public class JEuclidXMLHandler implements XMLHandler {
             final Graphics2DImagePainter painter = Graphics2DImagePainterMathML
                     .createGraphics2DImagePainter(document);
             g2dAdapter.paintImage(painter, rendererContext,
-                    ((Integer) rendererContext.getProperty("xpos"))
-                            .intValue(), ((Integer) rendererContext
-                            .getProperty("ypos")).intValue(),
-                    ((Integer) rendererContext.getProperty("width"))
-                            .intValue(), ((Integer) rendererContext
-                            .getProperty("height")).intValue());
+                    (Integer) rendererContext.getProperty("xpos"), (Integer) rendererContext
+                            .getProperty("ypos"),
+                    (Integer) rendererContext.getProperty("width"), (Integer) rendererContext
+                            .getProperty("height"));
 
         }
     }

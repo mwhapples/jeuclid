@@ -170,13 +170,11 @@ public final class CharacterMapping implements Serializable {
 
     private Integer[] getMapsTo(final int mapsTo,
             final Map<Integer, Integer[]> ffmap) {
-        Integer[] ia = ffmap.computeIfAbsent(mapsTo, k -> new Integer[Font.BOLD + Font.ITALIC + 1]);
-        return ia;
+        return ffmap.computeIfAbsent(mapsTo, k -> new Integer[Font.BOLD + Font.ITALIC + 1]);
     }
 
     private Map<Integer, Integer[]> getFFMap(final FontFamily fam) {
-        Map<Integer, Integer[]> ffmap = this.composeAttrs.computeIfAbsent(fam, k -> new HashMap<>());
-        return ffmap;
+        return this.composeAttrs.computeIfAbsent(fam, k -> new HashMap<>());
     }
 
     private int parseAwtStyle(final String descr) {

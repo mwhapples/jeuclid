@@ -501,7 +501,7 @@ public final class AttributesHelper {
         if (color == null) {
             return AttributesHelper.COLOR_TRANSPARENT;
         }
-        final StringBuffer sbuf = new StringBuffer(10);
+        final StringBuilder sbuf = new StringBuilder(10);
         sbuf.append('#');
         String s = Integer.toHexString(color.getRed());
         if (s.length() == 1) {

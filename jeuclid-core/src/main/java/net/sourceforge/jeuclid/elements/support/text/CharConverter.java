@@ -50,7 +50,7 @@ public final class CharConverter {
      */
     private static String actualConvert(final String string,
             final Map<Character, String> map) {
-        final StringBuffer buffer = new StringBuffer();
+        final StringBuilder buffer = new StringBuilder();
         for (int i = 0; i < string.length(); i++) {
             final char orig = string.charAt(i);
             final String mapsTo = map.get(orig);
